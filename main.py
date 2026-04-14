@@ -16,7 +16,7 @@ def sauvegarder_dans_fichier():
                 ligne = f"{e['nom']};{e['age']};{e['note']}\n"
                 f.write(ligne)
         print(" Données sauvegardées avec succès.")
-    except Exception as e:
+    except:
         print(" Erreur lors de la sauvegarde :", e)
 
 
@@ -102,7 +102,7 @@ def rechercher_etudiant():
 # Modifier un étudiant
 # -----------------------------
 def modifier_etudiant():
-    nom = input("Nom de l'étudiant à modifier : ").strip()
+    nom = input("Nom de l'étudiant à modifier : ")
 
     for e in etudiants:
         if e["nom"].lower() == nom.lower():
@@ -111,7 +111,7 @@ def modifier_etudiant():
                 e["note"] = float(input("Nouvelle note : "))
                 print(" Étudiant modifié !")
                 return
-            except ValueError:
+            except:
                 print(" Erreur de saisie.")
                 return
 
@@ -122,7 +122,7 @@ def modifier_etudiant():
 # Supprimer un étudiant
 # -----------------------------
 def supprimer_etudiant():
-    nom = input("Nom de l'étudiant à supprimer : ").strip()
+    nom = input("Nom de l'étudiant à supprimer : ")
 
     for e in etudiants:
         if e["nom"].lower() == nom.lower():

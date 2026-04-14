@@ -1,1 +1,3 @@
 hafid;20;14.0
+hassan;22;15.0
+yasssin;55;17.0
