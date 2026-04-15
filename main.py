@@ -159,6 +159,8 @@ def trier_etudiants():
     else:
         print(" Choix invalide.")
 
+#a lambda is an anonymous, one-line function used within the sort() method or sorted() function to define custom sorting logic.
+#  It is typically passed as the key argument to specify which part of an element should be used for the comparison.
 
 # -----------------------------
 # Calcul de statistiques simples
