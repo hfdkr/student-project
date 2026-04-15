@@ -147,18 +147,32 @@ def trier_etudiants():
     print("3. Trier par note")
     choix = input("Votre choix : ")
 
+    # Trier par nom
     if choix == "1":
-        etudiants.sort(key=lambda e: e["nom"].lower())
+        def get_nom(e):
+            return e["nom"].lower()
+        
+        etudiants.sort(key=get_nom)
         print(" Étudiants triés par nom.")
+
+    # Trier par age
     elif choix == "2":
-        etudiants.sort(key=lambda e: e["age"])
+        def get_age(e):
+            return e["age"]
+        
+        etudiants.sort(key=get_age)
         print(" Étudiants triés par age.")
+
+    # Trier par note
     elif choix == "3":
-        etudiants.sort(key=lambda e: e["note"])
+        def get_note(e):
+            return e["note"]
+        
+        etudiants.sort(key=get_note)
         print(" Étudiants triés par note.")
+
     else:
         print(" Choix invalide.")
-
 
 # -----------------------------
 # Calcul de statistiques simples
