@@ -27,10 +27,11 @@ def charger_depuis_fichier():
     global etudiants
     try:
         with open(FICHIER, "r", encoding="utf-8") as f:
-            etudiants = []
+            etudiants = [] # Reset the list
             for ligne in f:
                 ligne = ligne.strip()
                 if ligne:
+                    # Split the line into name, age, and grade
                     nom, age, note = ligne.split(";")
                     etudiants.append({
                         "nom": nom,
