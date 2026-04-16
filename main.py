@@ -78,6 +78,7 @@ def afficher_etudiants():
         print(" Aucun étudiant trouvé.")
     else:
         print("\nListe des étudiants :")
+        """ enumerate() is a built-in Python function that adds a counter to an iterable and returns it as an enumerate object."""
         for i, e in enumerate(etudiants, start=1):
             print(f"{i} - Nom: {e['nom']} | Age: {e['age']} | Note: {e['note']}")
 
